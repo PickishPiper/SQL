@@ -1,0 +1,18 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, size TEXT, quantity INTEGER, color TEXT, rating INTEGER);
+
+INSERT INTO store VALUES (1, "wetsuit", "XXSmall", 3, "Galaxy", 2);
+INSERT INTO store VALUES (2, "wetsuit", "XSmall", 2, "Galaxy", 4);
+INSERT INTO store VALUES (3, "wetsuit", "Small", 7, "Ice Blue", 4);
+INSERT INTO store VALUES (4, "wetsuit", "Men's Small", -1, "Black", 3);
+INSERT INTO store VALUES (5, "wetsuit", "Medium", 7, "Galaxy", 4);
+INSERT INTO store VALUES (6, "wetsuit", "Men's Medium", 10, "Black", 4);
+INSERT INTO store VALUES (7, "wetsuit", "Medium-Long", 2, "Ice Blue", 6);
+INSERT INTO store VALUES (8, "wetsuit", "Men's Med-Long", -4, "Lime", 9);
+INSERT INTO store VALUES (9, "wetsuit", "Large", 15, "Bubbles", 10);
+INSERT INTO store VALUES (10, "wetsuit", "Men's Large", 5, "Red", 9);
+INSERT INTO store VALUES (11, "wetsuit", "Large-Tall", 10, "Galaxy", 10);
+INSERT INTO store VALUES (12, "wetsuit", "XLarge", -1, "Bubbles", 8);
+INSERT INTO store VALUES (13, "wetsuit", "Men's XLarge", 4, "Black", 2);
+INSERT INTO store VALUES (14, "wetsuit", "XXLarge", -5, "Ice Blue", 6);
+INSERT INTO store VALUES (15, "wetsuit", "Men's XXLarge", 1, "Black", 5);
+SELECT * FROM store;
