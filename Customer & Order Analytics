@@ -41,3 +41,33 @@ AVG(quantity*price) FROM BIT_DB.FebSales Feb
 LEFT JOIN BIT_DB.customers cust
 ON Feb.orderid=cust.order_id
 WHERE Feb.Quantity > 2;
+
+SELECT orderdate
+FROM BIT_DB.FebSales
+WHERE orderdate between '02/13/19 00:00' AND '02/18/19 00:00';
+/*Results in 1000 rows w/ dates between 02-13 and 02-18, with no real organization in regards to date and time.*/
+
+SELECT location
+FROM BIT_DB.FebSales 
+WHERE orderdate = '02/18/19 01:35';
+/*Results in location | 866 Spruce St, Portland, ME 04101 - single location was pulled for */
+
+SELECT sum(quantity)
+FROM BIT_DB.FebSales 
+WHERE orderdate like '02/18/19%';
+/*pulled the number of orders that were placed on 02-18-19 but with any time stamp*/
+
+SELECT orderdate from BIT_DB.FebSales;
+
+SELECT distinct Product
+FROM BIT_DB.FebSales
+WHERE Product like '%Batteries%';
+
+SELECT distinct Product, Price
+FROM BIT_DB.FebSales 
+WHERE Price like '%.99';
+
+/*List all the products sold in Los Angeles in February, and include how many of each were sold.*/
+SELECT product, SUM(quantity) FROM BIT_DB.FebSales
+WHERE location LIKE '%Los Angeles%'
+GROUP BY product;
